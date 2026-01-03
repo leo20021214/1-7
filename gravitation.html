@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>萬有引力｜物理互動筆記</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<a class="skip" href="#main">跳到主要內容</a>
+
+<header>
+  <div class="container navbar">
+    <div class="brand"><span class="badge">Physics</span><span>萬有引力</span></div>
+    <nav aria-label="主導覽">
+      <a class="navlink" href="index.html">首頁</a>
+      <a class="navlink" href="momentum.html">動量碰撞</a>
+      <a class="navlink" href="periodic.html">彈簧振子</a>
+      <a class="navlink" href="optics.html">薄透鏡</a>
+      <a class="navlink" href="gravitation.html">萬有引力</a>
+      <a class="navlink" href="heat.html">溫度與熱</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="container">
+  <section class="hero">
+    <h1>Gravitation（萬有引力）</h1>
+    <p>一句話概念：任何兩個有質量的物體都互相吸引；引力大小與質量成正比、與距離平方成反比。衛星繞行是「一直在自由落體」。</p>
+  </section>
+
+  <section class="grid">
+    <article class="card span6">
+      <h2>學習目標</h2>
+      <ul class="list">
+        <li>會用萬有引力公式計算引力大小。</li>
+        <li>理解距離平方反比（r 變 2 倍，力變 1/4）。</li>
+        <li>能用向心力概念理解軌道。</li>
+      </ul>
+    </article>
+
+    <article class="card span6">
+      <h2>核心公式</h2>
+      <div class="formula">F = G (m1 m2) / r^2</div>
+      <div class="formula">Fc = m v^2 / r</div>
+      <div class="formula">（圓軌道）v = √(G M / r)</div>
+      <p class="muted">重點：軌道不是「沒重力」，而是重力剛好提供向心力。</p>
+    </article>
+
+    <article class="card span8">
+      <h2>直覺理解：為什麼衛星不會掉下來？</h2>
+      <p class="muted">
+        它其實一直在掉（自由落體），但同時具有足夠的切線速度，
+        所以它「掉下去的路徑」剛好沿著地球曲率繞行，形成軌道。
+      </p>
+      <hr class="sep" />
+      <h3>平方反比的直覺</h3>
+      <p class="muted">距離變遠時，引力像「攤得更開」所以變弱；r 變 3 倍 → 力變 1/9。</p>
+    </article>
+
+    <article class="card span4">
+      <h2>生活例子</h2>
+      <ul class="list">
+        <li>潮汐：月球引力造成海水周期起伏。</li>
+        <li>GPS：衛星軌道與時間校正都離不開重力概念。</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h2>互動模擬（PhET）＋操作任務</h2>
+      <div class="sim">
+        <div class="simframe">
+          <iframe src="https://phet.colorado.edu/sims/html/gravity-and-orbits/latest/gravity-and-orbits_all.html"
+                  allowfullscreen loading="lazy" title="Gravity and Orbits"></iframe>
+        </div>
+        <div>
+          <a class="btn primary" target="_blank" rel="noopener"
+             href="https://phet.colorado.edu/en/simulations/gravity-and-orbits">開新視窗操作</a>
+          <h3>任務</h3>
+          <ol class="list">
+            <li>改變距離 r：觀察引力變化是否符合 1/r² 趨勢。</li>
+            <li>改變初速：找出「會撞上」與「能繞行」的差別。</li>
+            <li>嘗試不同天體質量：描述軌道變化（半徑、速度）。</li>
+          </ol>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <h2>小測驗</h2>
+      <details class="quiz" id="quiz-grav" open>
+        <summary>點我作答（做完按「檢查答案」）</summary>
+        <p class="muted score">本頁小測驗：— / —</p>
+
+        <div class="q" data-answer="B">
+          <b>1) 距離變 2 倍，引力變成？</b>
+          <label><input type="radio" name="g1" value="A"> 2 倍</label>
+          <label><input type="radio" name="g1" value="B"> 1/4 倍</label>
+          <label><input type="radio" name="g1" value="C"> 1/2 倍</label>
+          <label><input type="radio" name="g1" value="D"> 不變</label>
+          <div class="result"></div>
+        </div>
+
+        <div class="q" data-answer="A">
+          <b>2) 衛星能繞地球是因為？</b>
+          <label><input type="radio" name="g2" value="A"> 重力提供向心力，且有切線速度</label>
+          <label><input type="radio" name="g2" value="B"> 太空沒有重力</label>
+          <label><input type="radio" name="g2" value="C"> 大氣把它撐住</label>
+          <label><input type="radio" name="g2" value="D"> 因為它很輕所以飄著</label>
+          <div class="result"></div>
+        </div>
+
+        <div class="q" data-answer="C">
+          <b>3) r 變 3 倍，引力變成？</b>
+          <label><input type="radio" name="g3" value="A"> 1/3 倍</label>
+          <label><input type="radio" name="g3" value="B"> 1/6 倍</label>
+          <label><input type="radio" name="g3" value="C"> 1/9 倍</label>
+          <label><input type="radio" name="g3" value="D"> 9 倍</label>
+          <div class="result"></div>
+        </div>
+
+        <button type="button" onclick="checkQuiz('quiz-grav')">檢查答案</button>
+      </details>
+    </article>
+  </section>
+
+  <div class="footer">
+    <div>下一頁：<a class="btn" href="heat.html">溫度與熱 →</a></div>
+  </div>
+</main>
+
+<script src="assets/script.js"></script>
+</body>
+</html>

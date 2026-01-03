@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>週期運動：彈簧振子｜物理互動筆記</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<a class="skip" href="#main">跳到主要內容</a>
+
+<header>
+  <div class="container navbar">
+    <div class="brand"><span class="badge">Physics</span><span>週期運動：彈簧振子</span></div>
+    <nav aria-label="主導覽">
+      <a class="navlink" href="index.html">首頁</a>
+      <a class="navlink" href="momentum.html">動量碰撞</a>
+      <a class="navlink" href="periodic.html">彈簧振子</a>
+      <a class="navlink" href="optics.html">薄透鏡</a>
+      <a class="navlink" href="gravitation.html">萬有引力</a>
+      <a class="navlink" href="heat.html">溫度與熱</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="container">
+  <section class="hero">
+    <h1>Periodic Motion（週期運動：彈簧振子）</h1>
+    <p>一句話概念：彈簧提供恢復力 <span class="kbd">F = −kx</span>，讓物體繞著平衡位置來回振動；週期由 <span class="kbd">m</span> 與 <span class="kbd">k</span> 決定。</p>
+  </section>
+
+  <section class="grid">
+    <article class="card span6">
+      <h2>學習目標</h2>
+      <ul class="list">
+        <li>理解恢復力為何會「拉回去」。</li>
+        <li>會用週期公式判斷 m、k 改變的影響。</li>
+        <li>能說明阻尼造成振幅衰減。</li>
+      </ul>
+    </article>
+
+    <article class="card span6">
+      <h2>核心公式</h2>
+      <div class="formula">F = −k x</div>
+      <div class="formula">ω = √(k / m)</div>
+      <div class="formula">T = 2π √(m / k)</div>
+      <p class="muted">重點：m ↑ → T ↑（更慢）；k ↑ → T ↓（更快）。</p>
+    </article>
+
+    <article class="card span8">
+      <h2>直覺理解</h2>
+      <h3>為什麼會來回？</h3>
+      <p class="muted">
+        因為只要偏離平衡位置（x ≠ 0），彈簧就產生方向相反的恢復力把你拉回去。
+        但回到平衡位置時速度最大，會「衝過頭」，於是又被拉回，形成週期運動。
+      </p>
+      <hr class="sep" />
+      <h3>阻尼是什麼？</h3>
+      <p class="muted">摩擦/空氣阻力會把機械能轉成熱，所以振幅逐漸變小（但小阻尼下週期近似不變）。</p>
+    </article>
+
+    <article class="card span4">
+      <h2>生活例子</h2>
+      <ul class="list">
+        <li>汽車避震：彈簧 + 阻尼器，避免一直搖。</li>
+        <li>吊燈被推：會晃動並慢慢停下（阻尼）。</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h2>互動模擬（PhET）＋操作任務</h2>
+      <div class="sim">
+        <div class="simframe">
+          <iframe src="https://phet.colorado.edu/sims/html/masses-and-springs/latest/masses-and-springs_all.html"
+                  allowfullscreen loading="lazy" title="Masses and Springs"></iframe>
+        </div>
+        <div>
+          <a class="btn primary" target="_blank" rel="noopener"
+             href="https://phet.colorado.edu/en/simulations/masses-and-springs">開新視窗操作</a>
+          <h3>任務</h3>
+          <ol class="list">
+            <li>固定 k，改變 m：量測週期，觀察是否符合 √m 的趨勢。</li>
+            <li>固定 m，改變 k：量測週期，觀察是否符合 1/√k 的趨勢。</li>
+            <li>加入阻尼：觀察振幅如何衰減（並描述原因）。</li>
+          </ol>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <h2>小測驗</h2>
+      <details class="quiz" id="quiz-periodic" open>
+        <summary>點我作答（做完按「檢查答案」）</summary>
+        <p class="muted score">本頁小測驗：— / —</p>
+
+        <div class="q" data-answer="D">
+          <b>1) m 變成 4 倍，週期 T 會變成幾倍？</b>
+          <label><input type="radio" name="p1" value="A"> 1/4 倍</label>
+          <label><input type="radio" name="p1" value="B"> 1/2 倍</label>
+          <label><input type="radio" name="p1" value="C"> 2 倍</label>
+          <label><input type="radio" name="p1" value="D"> 2 倍（因為 √4 = 2）</label>
+          <div class="result"></div>
+        </div>
+
+        <div class="q" data-answer="B">
+          <b>2) k 變大，週期會怎樣？</b>
+          <label><input type="radio" name="p2" value="A"> 變大</label>
+          <label><input type="radio" name="p2" value="B"> 變小</label>
+          <label><input type="radio" name="p2" value="C"> 不變</label>
+          <label><input type="radio" name="p2" value="D"> 變成 0</label>
+          <div class="result"></div>
+        </div>
+
+        <div class="q" data-answer="A">
+          <b>3) 阻尼造成振幅變小的原因是？</b>
+          <label><input type="radio" name="p3" value="A"> 能量轉成熱等形式散失</label>
+          <label><input type="radio" name="p3" value="B"> 彈簧突然消失</label>
+          <label><input type="radio" name="p3" value="C"> 重力變小</label>
+          <label><input type="radio" name="p3" value="D"> k 變成無限大</label>
+          <div class="result"></div>
+        </div>
+
+        <button type="button" onclick="checkQuiz('quiz-periodic')">檢查答案</button>
+      </details>
+    </article>
+  </section>
+
+  <div class="footer">
+    <div>下一頁：<a class="btn" href="optics.html">幾何光學：薄透鏡成像 →</a></div>
+  </div>
+</main>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
