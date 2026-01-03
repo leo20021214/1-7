@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>動量、衝量、碰撞｜物理互動筆記</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<a class="skip" href="#main">跳到主要內容</a>
+
+<header>
+  <div class="container navbar">
+    <div class="brand"><span class="badge">Physics</span><span>動量、衝量、碰撞</span></div>
+    <nav aria-label="主導覽">
+      <a class="navlink" href="index.html">首頁</a>
+      <a class="navlink" href="momentum.html">動量碰撞</a>
+      <a class="navlink" href="periodic.html">彈簧振子</a>
+      <a class="navlink" href="optics.html">薄透鏡</a>
+      <a class="navlink" href="gravitation.html">萬有引力</a>
+      <a class="navlink" href="heat.html">溫度與熱</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="container">
+  <section class="hero">
+    <h1>Momentum, Impulse, and Collisions（動量、衝量、碰撞）</h1>
+    <p>一句話概念：動量描述「運動的量」，衝量描述「力在時間的累積」，碰撞時若外力可忽略，總動量守恆。</p>
+  </section>
+
+  <section class="grid">
+    <article class="card span6">
+      <h2>學習目標</h2>
+      <ul class="list">
+        <li>分辨動量 <span class="kbd">p</span> 與衝量 <span class="kbd">J</span> 的意義。</li>
+        <li>能用 <span class="kbd">J = Δp</span> 解釋安全帶/安全氣囊。</li>
+        <li>判斷彈性、非彈性、完全非彈性碰撞。</li>
+      </ul>
+    </article>
+
+    <article class="card span6">
+      <h2>核心公式</h2>
+      <div class="formula">p = m v</div>
+      <div class="formula">J = F Δt = Δp</div>
+      <div class="formula">（外力≈0）p_before = p_after</div>
+      <p class="muted">補充：彈性碰撞除了動量守恆，動能也守恆；非彈性碰撞動能通常會轉成熱、形變、聲音。</p>
+    </article>
+
+    <article class="card span8">
+      <h2>直覺理解（老師很吃這段）</h2>
+      <h3>1) 同樣 Δp，為什麼延長時間會更安全？</h3>
+      <p class="muted">
+        因為 <span class="kbd">J = FΔt = Δp</span>。在 Δp 固定的情況下，Δt 越大 → 平均力 F 越小。
+        所以安全氣囊與安全帶的核心是「拉長減速時間」。
+      </p>
+      <hr class="sep" />
+      <h3>2) 動量守恆不是「每個人都守恆」</h3>
+      <p class="muted">
+        守恆的是「系統總動量」，不是每個物體自己的動量都不變。碰撞後兩物體速度改變，但加總仍可守恆（外力可忽略時）。
+      </p>
+    </article>
+
+    <article class="card span4">
+      <h2>生活例子</h2>
+      <ul class="list">
+        <li>打拳戴手套：接觸時間變長，峰值力變小。</li>
+        <li>車禍安全氣囊：延長乘客減速時間，降低受力。</li>
+        <li>沙坑/墊子：落地時間變長，衝擊力變小。</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h2>互動模擬（PhET）＋操作任務</h2>
+      <div class="sim">
+        <div class="simframe">
+          <iframe src="https://phet.colorado.edu/sims/html/collision-lab/latest/collision-lab_all.html"
+                  allowfullscreen loading="lazy" title="Collision Lab"></iframe>
+        </div>
+        <div>
+          <a class="btn primary" target="_blank" rel="noopener"
+             href="https://phet.colorado.edu/en/simulations/collision-lab">開新視窗操作（如果內嵌失敗）</a>
+          <h3>任務（把你的觀察寫在作業裡）</h3>
+          <ol class="list">
+            <li>設定等質量、彈性碰撞：觀察是否「速度交換」。</li>
+            <li>改成不同質量：記錄碰撞後速度差異（誰比較容易被改變速度？）。</li>
+            <li>調低彈性（更非彈性）：比較「總動量 vs 總動能」的變化。</li>
+          </ol>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <h2>小測驗</h2>
+      <details class="quiz" id="quiz-momentum" open>
+        <summary>點我作答（做完按「檢查答案」）</summary>
+        <p class="muted score">本頁小測驗：— / —</p>
+
+        <div class="q" data-answer="B">
+          <b>1) 安全氣囊能降低受傷的主要原因是？</b>
+          <label><input type="radio" name="q1" value="A"> 讓 Δp 變大</label>
+          <label><input type="radio" name="q1" value="B"> 讓 Δt 變大，平均力變小</label>
+          <label><input type="radio" name="q1" value="C"> 讓質量變小</label>
+          <label><input type="radio" name="q1" value="D"> 讓速度變大</label>
+          <div class="result"></div>
+        </div>
+
+        <div class="q" data-answer="C">
+          <b>2) 兩物體黏在一起的碰撞屬於？</b>
+          <label><input type="radio" name="q2" value="A"> 完全彈性碰撞</label>
+          <label><input type="radio" name="q2" value="B"> 部分彈性碰撞</label>
+          <label><input type="radio" name="q2" value="C"> 完全非彈性碰撞</label>
+          <label><input type="radio" name="q2" value="D"> 無碰撞</label>
+          <div class="result"></div>
+        </div>
+
+        <div class="q" data-answer="A">
+          <b>3) 動量守恆最需要的條件是？</b>
+          <label><input type="radio" name="q3" value="A"> 系統外力可忽略（或外力合力≈0）</label>
+          <label><input type="radio" name="q3" value="B"> 速度相同</label>
+          <label><input type="radio" name="q3" value="C"> 質量相同</label>
+          <label><input type="radio" name="q3" value="D"> 一定要彈性碰撞</label>
+          <div class="result"></div>
+        </div>
+
+        <button type="button" onclick="checkQuiz('quiz-momentum')">檢查答案</button>
+      </details>
+    </article>
+  </section>
+
+  <div class="footer">
+    <div>下一頁：<a class="btn" href="periodic.html">週期運動：彈簧振子 →</a></div>
+  </div>
+</main>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
